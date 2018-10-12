@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 """
 from whitenoise import WhiteNoise
 
-from my_project import MyWSGIApp
+from resume_parser import pdf_parser
 
 application = MyWSGIApp()
 application = WhiteNoise(application, root='/path/to/static/files')
