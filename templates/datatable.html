@@ -1,0 +1,38 @@
+{% extends 'base1.html' %}
+<div>
+  <head>
+    {% block content %}
+  </head>
+</div>
+<center><h2>Resume Data </h2><center>
+<center><table class="table table-bordered" style="border-width:5px; border:solid; border-color:black; width:75%">
+  <thead>
+    <tr style="border: 1px solid #000;">
+      <th style="border: 1px solid #000;">Updated On</th>
+      <th style="border: 1px solid #000;">Name</th>
+      <th style="border: 1px solid #000;">Email</th>
+      <th style="border: 1px solid #000;">Mobile</th>
+        <th style="border: 1px solid #000;">Parsed Resume</th>
+	<th style="border: 1px solid #000;">Shingles</th>
+      <th colspan="2" style="border: 1px solid #000; padding-left: 1%;">Actions</th>
+  </thead>
+<tbody>
+  </tr>
+    {% for i in resume_data %}
+        <tr style="border: 1px solid #000;">
+          <td style="border: 1px solid #000;"><a href="#"><button> {{i.added_on}} </button></a></td>
+          <td style="border: 1px solid #000;">{{i.name}}</td>
+          <td style="border: 1px solid #000;">{{i.email}}</td>
+          <td style="border: 1px solid #000;">{{i.mobile}}</td>
+          <td style="border: 1px solid #000;">{{i.parsed_resume}}</td>
+          <td style="border: 1px solid #000;">{{i.shingles}}</td>
+      <td style="border: 1px solid #000;"><a href="/resume_data_delete/"><button type="button">delete</button></a></td>
+      <!--<td style="border: 1px solid #000;"><a href="/update/{{i.id}}"><button type="button">update</button></a></td>-->
+    </tr>
+    {% endfor %}
+</tbody>
+
+</table>
+  </center>
+  <div style="margin-left:75px"><a href="/dataparsing/"><button  style= "width:10%";>Back</button></a></div>
+{% endblock %}

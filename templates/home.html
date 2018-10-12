@@ -1,0 +1,29 @@
+{% extends 'base1.html' %}
+<div>
+  <head>
+    {% block content %}
+  </head>
+</div>
+
+
+
+
+<form name="myform" action="/dataparsing/" method="POST"   accept="file/pdf" enctype="multipart/form-data"  style = "margin-left: 450px;">
+{% csrf_token %}
+
+
+<h4>Upload PDF File:</h4>
+<table>
+	<tr>
+		<td>
+                       <input type="file" name="pdf_file"  >
+		 </td>
+		<td>
+			  <button type="submit">Submit</button>
+	        </td>
+	</tr>
+</table>
+</form>
+
+
+{% endblock %}
