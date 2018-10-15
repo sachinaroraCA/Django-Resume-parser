@@ -34,10 +34,15 @@ def dataparsing(request):
     if request.method == "POST":
         uploaded_file = request.FILES.get("pdf_file")
         content = getPdfContent(uploaded_file)
+        print content
         resume_text = content.encode("ascii", "ignore")
+        print resume_text
         tokens = word_tokenize(resume_text)
+        #print tokens
         punctuations = ['(',')',';',':','[',']',',']
+        print punctuations
         stop_words = stopwords.words('english')
+        print stop_words
         #storing the cleaned resume
         filtered = [w for w in tokens if not w in stop_words and  not w in string.punctuation]
         print "removing the stop words....\nCleaning the resumes....\nExtracting Text ......."
@@ -54,12 +59,19 @@ def dataparsing(request):
 
         #mobile number
         mobile = ""
-        match_mobile = re.search(r'((?:\(?\+91\)?)?\d{9})',resume_text)
-        #handling the cases when mobile number is not given
-        if(match_mobile != None):
-            mobile = match_mobile.group(0)
-            print "Mobile : " +  mobile
+        if mobile:
+            match_mobile = re.search(r'((?:\(?\+91\)?)?\d{9})',resume_text)
+            #handling the cases when mobile number is not given
+            if(match_mobile != None):
+                mobile = match_mobile.group(0)
+                print "Mobile : " +  mobile
+        else:
+            match_mobile = re.search(r'(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})',resume_text)
+            if(match_mobile != None):
+                mobile = match_mobile.group(0)
+                print "Mobile : " +  mobile
 
+        #return HttpResponse(mobile)
         parsed_resume = ' '.join(filtered)
         print "Parsed Resume in plain Text : ", parsed_resume
         r = str(parsed_resume)    
@@ -76,7 +88,7 @@ def dataparsing(request):
         
         #add the new entries to the table
         now = datetime.datetime.now()
-        data = ParseData.objects.create(added_on = now, name = name , email = email ,mobile = mobile, parsed_resume = r , shinghles = shingle)
+        data = ParseData.objects.create(added_on = now, name = name , email = email ,mobile = int(mobile), parsed_resume = r , shinghles = shingle)
         #r = parsed_resume(name = name,email = email, mobile = mobile, parsed_resume = r, shingles = shingle)
         #commit the changes
         data.save()

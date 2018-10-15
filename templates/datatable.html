@@ -1,7 +1,14 @@
 {% extends 'base1.html' %}
+
 <div>
   <head>
     {% block content %}
+<style>
+	.res_data {
+		display:none;
+	}
+	</style>
+    {% load resumetag %}
   </head>
 </div>
 <center><h2>Resume Data </h2><center>
@@ -24,8 +31,18 @@
           <td style="border: 1px solid #000;">{{i.name}}</td>
           <td style="border: 1px solid #000;">{{i.email}}</td>
           <td style="border: 1px solid #000;">{{i.mobile}}</td>
-          <td style="border: 1px solid #000;">{{i.parsed_resume}}</td>
-          <td style="border: 1px solid #000;">{{i.shingles}}</td>
+	  {% if i.parsed_resume|length > 50 %}
+		  <td style="border: 1px solid #000;">{{i.parsed_resume|slice:":50"}}
+			<span style="font-size:16px; text-decoration:underline; color:black;">
+				<div id='click_btn'>
+				<button class ="btn_data" onclick="showMoreData()">Read more</button></span>
+				</div>
+			<span class='res_data' id ='data'>{{i.parsed_resume|get_all_text }}</span>
+		  </td>
+	  {% else %}
+		 <td style="border: 1px solid #000;">{{i.parsed_resume}}</td>
+	  {% endif %}
+      <td style="border: 1px solid #000;">{{i.shingles}}</td>
       <td style="border: 1px solid #000;"><a href="/resume_data_delete/"><button type="button">delete</button></a></td>
       <!--<td style="border: 1px solid #000;"><a href="/update/{{i.id}}"><button type="button">update</button></a></td>-->
     </tr>
@@ -35,4 +52,20 @@
 </table>
   </center>
   <div style="margin-left:75px"><a href="/dataparsing/"><button  style= "width:10%";>Back</button></a></div>
+  <script>
+function showMoreData() {
+  //document.getElementsByClassName("res_data").style.display = "inline";
+	var all = document.getElementsByClassName('res_data');
+	//var btn = document.getElementsByClassName('btn_data');
+   		 for (var i = 0; i < all.length; i++) 
+		{
+       			all[i].style.display = 'inline';
+			//this.style.display = 'none';
+			//btn[i].style.display = 'block'; this.style.display = 'none'"
+	//document.getElementsById("btn").style.display = "block";
+     
+		}
+}
+</script>
+
 {% endblock %}
