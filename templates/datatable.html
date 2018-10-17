@@ -15,12 +15,16 @@
 <center><table class="table table-bordered" style="border-width:5px; border:solid; border-color:black; width:75%">
   <thead>
     <tr style="border: 1px solid #000;">
-      <th style="border: 1px solid #000;">Updated On</th>
+      <th style="border: 1px solid #000;">Created On</th>
       <th style="border: 1px solid #000;">Name</th>
       <th style="border: 1px solid #000;">Email</th>
       <th style="border: 1px solid #000;">Mobile</th>
-        <th style="border: 1px solid #000;">Parsed Resume</th>
-	<th style="border: 1px solid #000;">Shingles</th>
+      <th style="border: 1px solid #000;">Date Of Birth</th>
+      <th style="border: 1px solid #000;">Address</th>
+      <th style="border: 1px solid #000;">Education</th>
+      <th style="border: 1px solid #000;">Experience</th>
+      <!--  <th style="border: 1px solid #000;">Parsed Resume</th>
+      <th style="border: 1px solid #000;">Shingles</th>-->
       <th colspan="2" style="border: 1px solid #000; padding-left: 1%;">Actions</th>
   </thead>
 <tbody>
@@ -31,18 +35,23 @@
           <td style="border: 1px solid #000;">{{i.name}}</td>
           <td style="border: 1px solid #000;">{{i.email}}</td>
           <td style="border: 1px solid #000;">{{i.mobile}}</td>
-	  {% if i.parsed_resume|length > 50 %}
+	  <td style="border: 1px solid #000;">{{i.date_of_birth}}</td>
+	  <td style="border: 1px solid #000;">{{i.address}}</td>
+	  <td style="border: 1px solid #000;">{{i.education}}</td>
+	  <td style="border: 1px solid #000;">{{i.experience}}</td>
+	 <!-- {% if i.parsed_resume|length > 50 %}
 		  <td style="border: 1px solid #000;">{{i.parsed_resume|slice:":50"}}
 			<span style="font-size:16px; text-decoration:underline; color:black;">
 				<div id='click_btn'>
 				<button class ="btn_data" onclick="showMoreData()">Read more</button></span>
 				</div>
+
 			<span class='res_data' id ='data'>{{i.parsed_resume|get_all_text }}</span>
 		  </td>
 	  {% else %}
 		 <td style="border: 1px solid #000;">{{i.parsed_resume}}</td>
 	  {% endif %}
-      <td style="border: 1px solid #000;">{{i.shingles}}</td>
+	  <td style="border: 1px solid #000;">{{i.shingles}}</td>-->
       <td style="border: 1px solid #000;"><a href="/resume_data_delete/"><button type="button">delete</button></a></td>
       <!--<td style="border: 1px solid #000;"><a href="/update/{{i.id}}"><button type="button">update</button></a></td>-->
     </tr>

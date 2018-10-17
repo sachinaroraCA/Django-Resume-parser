@@ -13,6 +13,7 @@ nltk==3.3
 pbr==4.3.0
 whitenoise==4.1
 pycrypto==2.6.1
+pygobject==3.26.1
 pyPdf==1.13
 python-docx==0.8.7
 pytz==2018.5
