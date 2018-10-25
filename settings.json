@@ -1,0 +1,7 @@
+{
+    "Apikey": "", 
+    "Host": "127.0.0.1", 
+    "Port": 8181, 
+    "Scheme": "http", 
+    "UseCloudFX": false
+}

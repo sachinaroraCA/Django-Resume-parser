@@ -28,3 +28,19 @@ class ParseData(models.Model):
     experience = models.CharField(max_length = 50, null = True, blank = True)
     parsed_resume = models.CharField(max_length = 100,null = True,blank = True)
     shinghles = models.CharField(max_length = 100, null = True,blank = True)
+
+#class ClientAPI(models.Model):
+#    username    = models.CharField(max_length=50, help_text="API username")
+#    password    = models.CharField(max_length=24,  help_text="API Password")
+#    ipaddress   = models.CharField(max_length=255, default=0, help_text="comma separated IP address")
+#    def __unicode__(self):
+#        return  str(self.username)
+
+
+class Note(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s %s' % (self.title, self.body)

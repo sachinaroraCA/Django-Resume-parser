@@ -1,0 +1,277 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+#from django.views.decorators.csrf import csrf_exempt
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from django.shortcuts import render
+from django.http import HttpResponse,HttpResponseRedirect
+import pyPdf
+import pdftotext
+import docx
+from docx import Document
+import os
+import json
+import docx
+import string
+import re
+from nltk.util import ngrams
+from django.db.models import *
+from pdf_parser.models import *
+from django.shortcuts import render_to_response, redirect
+#from jsonview.decorators import json_view
+#from basicauth import decode
+from pdf_parser.models import *
+from django.core.files.storage import FileSystemStorage
+from resume_parser.settings import MEDIA_ROOT
+
+def index(request):
+    return render(request,'home.html')
+
+def getPdfContent(uploaded_file,upload_file_path):
+    content = ""
+    # Load PDF into pyPDF
+    pdf = pyPdf.PdfFileReader(uploaded_file)
+    print pdf.isEncrypted
+    # Iterate pages
+    for i in range(0, pdf.getNumPages()):
+        print pdf.getPage(i)
+        # Extract text from page and add to content
+        content += pdf.getPage(i).extractText() + "\n"
+        print i
+        print content
+    if content.strip() == '':
+        with open(upload_file_path, "rb") as f:
+            pdf_pdf2 = pdftotext.PDF(f)
+            for page in pdf_pdf2:
+                content += page + "\n"
+        #with open(uploaded_file, "rb") as f:
+        #pdf_pdf2 = pdftotext.PDF(uploaded_file)
+        #for page in pdf_pdf2:
+        #    content += page + "\n"
+        # Collapse whitespace
+    content = " ".join(content.replace(u"\xa0", " ").strip().split())
+    return content
+
+
+#def getDocxContent(uploaded_file):
+#    doc = docx.Document(uploaded_file)
+#    fullText = ""
+#    for para in doc.paragraphs:
+#        fullText += para.text
+#    return fullText
+
+
+
+
+def dataparsing(request):
+    try:
+        if request.method == "POST":
+            uploaded_file = request.FILES.get("pdf_file")
+            fs = FileSystemStorage()
+            filename = fs.save(uploaded_file.name, uploaded_file)
+            upload_file_path = MEDIA_ROOT + '/' +filename
+            content = getPdfContent(uploaded_file,upload_file_path)
+            print content
+            resume_text = content.encode("ascii", "ignore")
+            #if uploaded_file:
+            #    uploaded_file = uploaded_file.name
+            #    if uploaded_file.endswith(".pdf"):
+            #        content = getPdfContent(uploaded_file)
+            #        print content
+            #        resume_text = content.encode("ascii", "ignore")
+            #    elif uploaded_file.endswith(".docx"):
+            #        fullText = getDocxContent(uploaded_file)
+            #        print fullText
+            #        resume_text = fullText.encode("ascii", "ignore")
+            #    else:
+            #        print "File Format is currently not supported"
+            #        exit(0)
+            tokens = word_tokenize(resume_text)
+            #print tokens
+            punctuations = ['(',')',';',':','[',']',',']
+            #print punctuations
+            stop_words = stopwords.words('english')
+            #print stop_words
+            #storing the cleaned resume
+            filtered = [w for w in tokens if not w in stop_words and  not w in string.punctuation]
+            print "removing the stop words....\nCleaning the resumes....\nExtracting Text ......."
+            #print filtered
+            #get the name from the resume
+            name  = str(filtered[3])+' ' +str(filtered[4])
+            print "Name : " + name
+            email = ""
+            match_mail = re.search(r'[\w\.-]+@[\w\.-]+', resume_text)
+            #handling the cases when mobile number is not given
+            if(match_mail != None):
+                email = match_mail.group(0)
+                print "Email : " + email
+
+            #mobile number
+            mobile = ""
+            if mobile:
+                match_mobile = re.search(r'((?:\(?\+91\)?)?\d{9})',resume_text)
+                #handling the cases when mobile number is not given
+                if(match_mobile != None):
+                    mobile = match_mobile.group(0)
+                    print "Mobile : " +  mobile
+            else:
+                match_mobile = re.search(r'(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})',resume_text)
+                if(match_mobile != None):
+                    mobile = match_mobile.group(0)
+                    print "Mobile : " +  mobile
+            #Date Of Birth
+            date_of_birth = ""
+            #if date_of_birth:
+            #dob = re.findall(r'(\d+/\d+/\d+)',resume_text,re.I)[0]
+            #print dob
+            #if(dob != None):
+            #    date_of_birth = dob
+            #    print "Date Of birth:" + date_of_birth
+            #else:
+            #    dob = re.findall(r'\d\d\w\w\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{4}', resume_text,re.I)[0]
+            #    print dob
+            #    if(dob != None):
+            #        date_of_birth = dob
+            #        print "Date Of Birth:" + date_of_birth
+            #return HttpResponse(date_of_birth)
+            parsed_resume = ' '.join(filtered)
+            print "Parsed Resume in plain Text : ", parsed_resume
+            r = str(parsed_resume)    
+            shingle = []
+            education_shingle = []
+            experience_shingle = []
+            skill_shingle = []
+            make_skill = ngrams(filtered,8)
+            for s in make_skill:
+                skill_shingle.append(s)
+            print "skill_shingle :", skill_shingle
+            make_edu = ngrams(filtered,20)
+            # form n-grams - basically the singles for LSH
+            for s in make_edu:
+                education_shingle.append(s)
+            #print "Shingles for the education: ",education_shingle
+            make_exp = ngrams(filtered,20)
+            for s in make_exp:
+                experience_shingle.append(s)
+            #print "Shigles for the experience:", experience_shingle
+            make_shingle = ngrams(filtered,10)
+            #print the shingles
+            for s in make_shingle:
+                shingle.append(s)  
+
+                              
+            #print "Shingles for the resume : ",shingle
+            address = ""
+            #skill = ""
+            #if(skill != None):
+            #    skill = [item for item in skill_shingle if item[0] == "Skills"]
+            #    skill = ' '.join([tup for tup in skill])
+            #    print "skill:" + skill
+            #if(address != None):
+            #    add = [item for item in shingle if item[0] == "Address"]
+            #    add = add[0]
+            #    address = ' '.join([tup for tup in add])
+            #    address = address[8:]
+            #    print "address:" + address
+            #add the new entries to the table
+            education = ""
+            if(education != None ):
+                edu = [item for item in education_shingle if item[0] == "Education"]
+                edu = edu[0]
+                education  = ' '.join([tup for tup in edu]) 
+                education = education[10:]
+                print "education :" + education
+        
+            experience = ""
+            if(experience != None):
+                #list = []
+                exp = [item for item in experience_shingle if item[0] == "Experience"][0]
+                exp = exp[1:]
+                #exp_1 = exp_1[2:]
+                #exp_2 = [item for item in shingle if item[0] == "Designation"]
+                #exp_2 = exp_2[0]
+                #list.append(exp_1 + exp_2)
+                #list = list[0]
+                experience  = ' '.join([tup for tup in exp])
+                print "experience :" + experience
+
+            now = datetime.datetime.now()
+            data = ParseData.objects.create(added_on = now, name = name , email = email ,mobile = mobile, date_of_birth = date_of_birth,address = address,education = education,experience = experience,parsed_resume = r , shinghles = shingle)
+            #r = parsed_resume(name = name,email = email, mobile = mobile, parsed_resume = r, shingles = shingle)
+            #commit the changes
+            data.save()
+            return redirect("/resumeinformation/")
+            
+            
+            
+            return HttpResponse('Data Save Successfully')
+        else:
+            return HttpResponse('Missing Some Data Field')
+    except Exception as ex:
+        print "Exception:" + repr(ex)
+    return HttpResponseRedirect('/dataparsing/')
+
+
+def resumeinformation(request):
+    resume_data = ParseData.objects.all()
+    return render(request, "datatable.html", {'resume_data': resume_data})
+
+def resume_data_delete(request):
+    data = ParseData.objects.all()[0].delete()
+    return redirect("/resumeinformation/")
+
+
+#def api_auth(request, username, password):
+#      #return HttpResponse(username)
+#      #if request.GET.get('username') or request.POST.get('username') :
+#          #customer_api = CustomerAPI.objects.get(username=request.POST['username'])
+#          print  "=====" , username, password
+#          if request.GET.get('username'):
+#              username = request.GET.get('username')
+#              password = request.GET.get('password')
+#          if request.POST.get('username'):
+#              username = request.POST.get('username')
+#              password = request.POST.get('password')
+#          try:
+#              customer_api = ClientAPI.objects.get(username=username)
+#             #if username == 'ecomexpress':
+#             #    return customer_api
+#              if customer_api.password == password:
+#                  if customer_api.ipaddress != "0":
+#                      ip_list    =  customer_api.ipaddress.split(",")
+#                      request_ip =  request.META.get('REMOTE_ADDR').strip()
+#                      if request_ip in ip_list:
+#                          return customer_api
+#                      else:
+#                          return False
+#                  else:
+#                      return customer_api
+#              else:
+#                  return False
+#          except ClientAPI.DoesNotExist:
+#              return False
+#
+#@csrf_exempt
+#@json_view
+#def phone_api(request):
+#    response = []
+#    try:
+#        data=json.loads(request.body)
+#    except:
+#        resp ={"message":"Invalid Json","success":False}
+#        return resp
+#    auth_basic = request.META.get('HTTP_AUTHORIZATION',None)
+#    if not auth_basic:
+#        return {"message":"Invalid Request","success":False}
+#    username, password = decode(auth_basic.split(" ")[1])
+#    if not username:
+#        username = request.GET.get('username', None)
+#        if not username:
+#             username = request.POST.get('username', None)
+#    if username.strip().lower() == 'xyz':
+#        capi =  api_auth(request, username, password)
+#    else:
+#        capi =  api_auth(request, username= username, password=password)
+#    if not capi:
+#        return {"message":"Invalid Request","success":False}
+#    #return HttpResponse('We Are Working On it')

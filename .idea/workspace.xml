@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2354ca4f-f632-45d3-b9a3-a31a46bb5df1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_parser/sf_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_parser/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_parser/utils/sf_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/easy_install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/easy_install-2.7" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/easy_install-2.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/pip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/pip2" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/pip2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/pip2.7" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/pip2.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/python" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/python-config" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/python-config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/python2" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/python2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/python2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/bin/wheel" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/bin/wheel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/include/python2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/UserDict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/_abcoll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/_weakrefset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/abc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/codecs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/copy_reg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/encodings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/fnmatch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/genericpath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/lib-dynload" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/linecache.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/locale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/ntpath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/os.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/posixpath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/re.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/t32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/t32.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/t64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/t64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/w32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/w32.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/w64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/pip/_vendor/distlib/w64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli-32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli-32.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli-64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli-64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/cli.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui-32.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui-32.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui-64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui-64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_env/lib/python2.7/site-packages/setuptools/gui.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/sre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/sre_compile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/sre_constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/sre_parse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/stat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/lib/python2.7/warnings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/local/bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/local/include" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_env/local/lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_parser/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_parser/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_parser/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_parser/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_parser/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_parser/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_parser/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume_parser/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/datatable.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="83240793">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="266" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="266" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-202585322">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="591" />
+          <entry key="txt" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="Python" value="591" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="5" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automationCTI/automationfx/actions/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdf_parser/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+                <marker date="1540458015687" expanded="true" signature="13956:13957" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdf_parser/sf_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pdf_parser/utils/sf_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="93" column="14" lean-forward="true" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+              <folding>
+                <element signature="e#34#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+              <folding>
+                <element signature="e#138#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#131#145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resume_parser/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get_connection</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resume_parser/settings.py" />
+        <option value="$PROJECT_DIR$/pdf_parser/resource.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/pdf_parser/views.py" />
+        <option value="$PROJECT_DIR$/pdf_parser/sf_config.py" />
+        <option value="$PROJECT_DIR$/pdf_parser/utils/sf_api.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1299" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="resume_parser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resume_parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resume_parser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resume_parser" type="462c0819:PsiDirectoryNode" />
+              <item name="pdf_parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="sett&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pdf_parser" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/automationCTI" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Unnamed">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <module name="resume_parser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/caresumeparser/pdf_env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver 127.0.0.1:8000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="$PROJECT_DIR$/manage.py" />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" />
+      </method>
+    </configuration>
+    <configuration name="sf_api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="resume_parser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pdf_parser/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pdf_parser/utils/sf_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.sf_api" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sf_api" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2354ca4f-f632-45d3-b9a3-a31a46bb5df1" name="Default Changelist" comment="" />
+      <created>1539873009572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539873009572</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43556282" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24959217" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27079934" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952693" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pdf_parser/utils/sf_api.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pdf_parser/resource.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automationCTI/automationfx/api/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automationCTI/automationfx/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automationCTI/example_sendmessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume_parser/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_parser/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1540458015687" expanded="true" signature="13956:13957" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automationCTI/automationfx/actions/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#131#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/caresumeparser/pdf_env/lib/python2.7/site-packages/simple_salesforce/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="e#138#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_parser/sf_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdf_parser/utils/sf_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="93" column="14" lean-forward="true" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+          <folding>
+            <element signature="e#34#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'pdf_parser',
+    'automationCTI',
 ]
 
 MIDDLEWARE = [
